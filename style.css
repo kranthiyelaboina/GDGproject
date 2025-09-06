@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(45deg, #4a90e2, #7b68ee);
+    min-height: 100vh;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.mainbox {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.topbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+#newtext {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    color: #333;
+    pointer-events: auto;
+    user-select: text;
+}
+
+#newtext:focus {
+    border-color: #4a90e2;
+}
+
+#addbtn {
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#addbtn:hover {
+    background: #357abd;
+}
+
+.searchbox {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+#findnote {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+#modeswitch {
+    padding: 8px 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.noteitem {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-left: 3px solid #4a90e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.noteitem:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.notetext {
+    flex: 1;
+    margin-right: 10px;
+    cursor: pointer;
+    word-break: break-word;
+    font-size: 14px;
+}
+
+.btngroup {
+    display: flex;
+    gap: 5px;
+}
+
+.pinbtn, .editbtn, .delbtn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.pinbtn {
+    background: #f39c12;
+    color: white;
+}
+
+.editbtn {
+    background: #27ae60;
+    color: white;
+}
+
+.delbtn {
+    background: #e74c3c;
+    color: white;
+}
+
+.pinneditem {
+    background: #fff3cd;
+    border-left-color: #f39c12;
+}
+
+.editingitem {
+    background: #e3f2fd;
+}
+
+.editfield {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #4a90e2;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.darkmode {
+    background: #1a1a1a;
+    color: white;
+}
+
+.darkmode .mainbox {
+    background: #2d2d2d;
+    color: white;
+}
+
+.darkmode h1 {
+    color: white;
+}
+
+.darkmode .noteitem {
+    background: #3a3a3a;
+    color: white;
+}
+
+.darkmode .pinneditem {
+    background: #4a4a2a;
+}
+
+.darkmode #newtext, .darkmode #findnote {
+    background: #3a3a3a;
+    color: white;
+    border-color: #555;
+}
+
+.emptymsg {
+    text-align: center;
+    color: #666;
+    padding: 30px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .mainbox {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .topbar, .searchbox {
+        flex-direction: column;
+    }
+    
+    .noteitem {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .notetext {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}
